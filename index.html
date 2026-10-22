@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarjana Jaiswal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#FBF8F6;
+    --surface:#F3EDF4;
+    --text:#352A3B;
+    --muted:#8A7C92;
+    --accent:#7C5295;
+    --accent2:#A77BC2;
+    --accent3:#C9A0DC;
+    --border:rgba(124,82,149,0.14);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --sans:'Jost',system-ui,sans-serif;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.25rem 5%;
+    background:rgba(251,248,246,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  nav .logo{font-family:var(--serif); font-weight:700; font-size:1.1rem; text-decoration:none;}
+  nav .links{display:flex; gap:2rem; font-size:0.9rem;}
+  nav .links a{text-decoration:none; color:var(--muted); transition:color .2s;}
+  nav .links a:hover{color:var(--text);}
+
+  section{padding:8rem 5% 6rem; max-width:1000px; margin:0 auto;}
+
+  .hero{
+    min-height:100vh; display:flex; flex-direction:column; justify-content:center;
+    padding-top:5rem;
+  }
+  .hero .eyebrow{
+    color:var(--accent); font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+    font-size:0.78rem; margin-bottom:1.25rem;
+  }
+  .hero h1{
+    font-family:var(--serif); font-weight:700;
+    font-size:clamp(2.6rem,7vw,5rem); line-height:1.05; letter-spacing:-0.01em;
+    margin-bottom:1.5rem;
+  }
+  .hero h1 span{color:var(--accent);}
+  .hero p{
+    max-width:560px; color:var(--muted); font-size:1.15rem; margin-bottom:2.25rem;
+  }
+  .btn-row{display:flex; gap:1rem; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    padding:0.8rem 1.6rem; border-radius:999px; font-weight:600; font-size:0.95rem;
+    text-decoration:none; transition:transform .15s, box-shadow .15s;
+  }
+  .btn-primary{background:var(--accent); color:#FBF8F6;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 8px 24px rgba(124,82,149,0.3);}
+  .btn-outline{border:1px solid var(--border); color:var(--text);}
+  .btn-outline:hover{border-color:var(--accent2); color:var(--accent2);}
+
+  .section-label{
+    color:var(--accent); font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+    font-size:0.78rem; margin-bottom:0.75rem;
+  }
+  .section-title{
+    font-family:var(--serif); font-weight:700; font-size:clamp(1.8rem,4vw,2.5rem);
+    margin-bottom:2.5rem;
+  }
+
+  .about p{color:var(--muted); font-size:1.05rem; max-width:680px; margin-bottom:1rem;}
+
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;}
+  .card{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:1.75rem; transition:transform .2s, border-color .2s;
+  }
+  .card:hover{transform:translateY(-4px); border-color:var(--accent2);}
+  .card .tag{
+    display:inline-block; font-size:0.7rem; font-weight:600; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--accent2); margin-bottom:0.75rem;
+  }
+  .card h3{font-family:var(--serif); font-size:1.2rem; margin-bottom:0.5rem;}
+  .card p{color:var(--muted); font-size:0.92rem;}
+
+  .skills{display:flex; flex-wrap:wrap; gap:0.6rem;}
+  .skill{
+    padding:0.5rem 1rem; border-radius:999px; background:var(--surface);
+    border:1px solid var(--border); font-size:0.85rem; color:var(--muted);
+  }
+
+  footer{
+    padding:4rem 5%; text-align:center; border-top:1px solid var(--border);
+    color:var(--muted); font-size:0.9rem;
+  }
+  footer a{color:var(--accent2); text-decoration:none;}
+
+  @media (max-width:640px){
+    nav .links{gap:1.2rem; font-size:0.82rem;}
+    section{padding:6rem 6% 4rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Sarjana Jaiswal</a>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero" id="top">
+  <div class="eyebrow">Portfolio — work in progress</div>
+  <h1>Hi, I'm Sarjana. <span>An expert generalist.</span></h1>
+  <p>This page is a placeholder while the full site gets built out — but the link is live, so bookmark it. Real projects, writing, and details are landing soon.</p>
+  <div class="btn-row">
+    <a href="#contact" class="btn btn-primary">Get in touch</a>
+    <a href="#projects" class="btn btn-outline">See projects</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-label">About</div>
+  <h2 class="section-title">A quick intro</h2>
+  <p>Placeholder bio — replace with 2–4 sentences on who you are, what you work on, and what you're looking for. Keep it specific: what you've built, what you're good at, what kind of role or project excites you.</p>
+</section>
+
+<section id="projects">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <span class="tag">Project one</span>
+      <h3>Project title</h3>
+      <p>Short description of what it does, the stack used, and the impact or result. Add a link when ready.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Project two</span>
+      <h3>Project title</h3>
+      <p>Short description of what it does, the stack used, and the impact or result. Add a link when ready.</p>
+    </div>
+    <div class="card">
+      <span class="tag">Project three</span>
+      <h3>Project title</h3>
+      <p>Short description of what it does, the stack used, and the impact or result. Add a link when ready.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section-label">Toolkit</div>
+  <h2 class="section-title">Skills</h2>
+  <div class="skills">
+    <span class="skill">Replace me</span>
+    <span class="skill">With your</span>
+    <span class="skill">Actual skills</span>
+    <span class="skill">Languages</span>
+    <span class="skill">Tools</span>
+    <span class="skill">Frameworks</span>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-label">Contact</div>
+  <h2 class="section-title">Let's talk</h2>
+  <p style="color:var(--muted); max-width:560px; margin-bottom:2rem;">Replace with your email and links (LinkedIn, GitHub, resume download, etc.).</p>
+  <div class="btn-row">
+    <a href="mailto:sarjana@berkeley.edu" class="btn btn-primary">Email me</a>
+    <a href="#" class="btn btn-outline">LinkedIn</a>
+    <a href="#" class="btn btn-outline">GitHub</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2026 Sarjana Jaiswal. Built with care.
+</footer>
+
+</body>
+</html>
